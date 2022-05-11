@@ -1,0 +1,92 @@
+* {
+  font-family: 'Roboto', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  top: 0;
+  padding: 0.1em;
+  background-color: white;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  color: #818181;
+  background-color: transparent;
+  font-size: 1.5rem;
+  margin: 0.5em;
+  border: none;
+}
+
+.img {
+  width: 100px;
+  height: 50px;
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 2rem;
+}
+
+@media screen and (max-width: 1020px) {
+  .searchForm {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 670px) {
+  .searchForm {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 625px) {
+  .searchForm {
+    display: none;
+  }
+}
+
+.searchInput {
+  width: 100%;
+  height: 2rem;
+}
+
+.searchInput::placeholder {
+  font-size: 1rem;
+}
+
+.searchBtn {
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  padding: 0.37rem 1rem;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid rgb(118, 118, 118);
+}
+
+.login {
+  font-size: 1.1rem;
+  color: #065fd4;
+  background-color: transparent;
+  padding: 0.5rem 0.8rem;
+  margin: 0rem 1rem;
+  border: 1px solid #065fd4;
+}
+
+.login_name {
+  margin-left: 0.3rem;
+}
