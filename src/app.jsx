@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import './app.css';
-import Navbar from './components/navbar/navbar';
+import styles from './app.module.css';
+import SearchHeader from './components/search_header/search_header';
 import VideoList from './components/video_list/video_list';
 
 function App() {
@@ -23,10 +23,10 @@ function App() {
       .catch((error) => console.log('error', error));
   }, []); // 빈 배열을 초기값으로 넣어주면 마운트가 되었을때만 이 부분이 호출
   return (
-    <>
-      {/* <Navbar /> */}
+    <div className={styles.app}>
+      <SearchHeader />
       <VideoList videos={videos} />;
-    </>
+    </div>
   );
 }
 

@@ -1,13 +1,4 @@
-* {
-  font-family: 'Roboto', Arial, sans-serif;
-  box-sizing: border-box;
-}
-
-button {
-  cursor: pointer;
-}
-
-.navbar {
+.header {
   display: flex;
   position: fixed;
   align-items: center;
@@ -24,7 +15,7 @@ button {
   align-items: center;
 }
 
-.menu {
+.menuBtn {
   color: #818181;
   background-color: transparent;
   font-size: 1.5rem;

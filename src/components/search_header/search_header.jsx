@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import styles from './navbar.module.css';
+import styles from './search_header.module.css';
 
-class Navbar extends Component {
+class SearchHeader extends Component {
   render() {
     return (
-      <nav className={styles.navbar}>
+      <header className={styles.header}>
         <div className={styles.home}>
-          <button className={styles.menu}>
+          <button className={styles.menuBtn}>
             <i className="fas fa-bars"></i>
           </button>
           <img
@@ -29,9 +29,9 @@ class Navbar extends Component {
           <i className="fa-solid fa-circle-user"></i>
           <span className={styles.login_name}>로그인</span>
         </button>
-      </nav>
+      </header>
     );
   }
 }
 
-export default Navbar;
+export default SearchHeader;
