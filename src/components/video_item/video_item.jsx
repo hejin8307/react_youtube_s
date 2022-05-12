@@ -18,9 +18,6 @@ const VideoItem = ({video, video: {snippet}}) => (
             video.statistics.viewCount
           )} ● ${converter.agoConverter(snippet.publishedAt)}`}
         </p>
-        {/* <p className={styles.publishedDate}>
-          {converter.agoConverter(snippet.publishedAt)}
-        </p> */}
       </div>
     </div>
   </li>
