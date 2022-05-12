@@ -15,7 +15,7 @@ class SearchHeader extends Component {
             alt="logo"
           />
         </div>
-        <form className={styles.searchForm}>
+        <div className={styles.searchForm}>
           <input
             type="text"
             className={styles.searchInput}
@@ -24,7 +24,7 @@ class SearchHeader extends Component {
           <button className={styles.searchBtn}>
             <i className="fa-solid fa-magnifying-glass"></i>
           </button>
-        </form>
+        </div>
         <button className={styles.login}>
           <i className="fa-solid fa-circle-user"></i>
           <span className={styles.login_name}>로그인</span>

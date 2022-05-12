@@ -13,10 +13,12 @@ const VideoItem = ({video, video: {snippet}}) => (
       <div className={styles.metadata}>
         <p className={styles.title}>{snippet.title}</p>
         <p className={styles.channel}>{snippet.channelTitle}</p>
-        {/* <p className={styles.count}>
-          {`조회수 ${converter.viewConverter(video.statistics.viewCount)}`}
+        <p className={styles.count}>
+          {`조회수 ${converter.viewConverter(
+            video.statistics.viewCount
+          )} ● ${converter.agoConverter(snippet.publishedAt)}`}
         </p>
-        <p className={styles.publishedDate}>
+        {/* <p className={styles.publishedDate}>
           {converter.agoConverter(snippet.publishedAt)}
         </p> */}
       </div>
