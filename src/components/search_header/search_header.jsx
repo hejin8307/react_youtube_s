@@ -1,14 +1,12 @@
-import React, {Component, useRef} from 'react';
 import styles from './search_header.module.css';
+import React, {useRef} from 'react';
 
 const SearchHeader = ({onSearch}) => {
   const inputRef = useRef();
   const handleSearch = () => {
     const value = inputRef.current.value;
-    console.log(value);
     onSearch(value);
   };
-
   const onClick = () => {
     handleSearch();
   };
@@ -18,30 +16,25 @@ const SearchHeader = ({onSearch}) => {
       handleSearch();
     }
   };
-
   return (
     <header className={styles.header}>
-      <div className={styles.home}>
-        <button className={styles.menuButton}>
-          <i className="fas fa-bars"></i>
-        </button>
-        <img className={styles.img} src="/images/youtube_logo.png" alt="logo" />
+      <div className={styles.logo}>
+        <img className={styles.img} src="/images/logo.png" alt="logo" />
+        <h1 className={styles.title}>Youtube</h1>
       </div>
-      <div className={styles.searchBar}>
-        <input
-          ref={inputRef}
-          type="text"
-          className={styles.input}
-          placeholder="Search"
-          onKeyPress={onKeyPress}
+      <input
+        ref={inputRef}
+        className={styles.input}
+        type="search"
+        placeholder="Search..."
+        onKeyPress={onKeyPress}
+      />
+      <button className={styles.button} type="submit" onClick={onClick}>
+        <img
+          className={styles.buttonImg}
+          src="/images/search.png"
+          alt="search"
         />
-        <button className={styles.button} onClick={onClick}>
-          <i className="fa-solid fa-magnifying-glass"></i>
-        </button>
-      </div>
-      <button className={styles.login}>
-        <i className="fa-solid fa-circle-user"></i>
-        <span className={styles.login_name}>로그인</span>
       </button>
     </header>
   );
