@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import styles from './app.module.css';
-import SearchHeader from './components/search_header/search_header';
+import SearchHeader from './components/search_header/searchHeader';
 import VideoList from './components/video_list/video_list';
 import VideoDetail from './components/video_detail/videoDetail';
 
@@ -12,21 +12,21 @@ function App({youtube}) {
     setSelectedVideo(video);
   };
 
-  const search = (query) => {
+  const search = useCallback((query) => {
     youtube
       .search(query) //
       .then((videos) => {
         setVideos(videos);
         setSelectedVideo(null);
       });
-  };
+  }, []);
 
   // 컴포넌트가 mount or update 될 때 마다 useEffect가 호출됨
   useEffect(() => {
     youtube
       .mostPopular() //
       .then((videos) => setVideos(videos));
-  }, []); // 빈 배열을 초기값으로 넣어주면 마운트가 되었을때만 이 부분이 호출
+  }, [youtube]); // 빈 배열을 초기값으로 넣어주면 마운트가 되었을때만 이 부분이 호출
 
   return (
     <div className={styles.app}>
