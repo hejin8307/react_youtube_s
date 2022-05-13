@@ -15,7 +15,10 @@ function App({youtube}) {
   const search = (query) => {
     youtube
       .search(query) //
-      .then((videos) => setVideos(videos));
+      .then((videos) => {
+        setVideos(videos);
+        setSelectedVideo(null);
+      });
   };
 
   // 컴포넌트가 mount or update 될 때 마다 useEffect가 호출됨
